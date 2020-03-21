@@ -6,7 +6,7 @@
 
 # Run: 
 
-set -o errexit  # make script exits when a command fails
+# set -o errexit  # make script exits when a command fails
 set -o pipefail # exit status of the last command that threw a non-zero exit code is returned
 # set -o xtrace  # for debugging
 
@@ -21,7 +21,6 @@ packages_wo_addcomms="
 curl
 htop
 wget
-micro
 xclip
 firefox
 ca-certificates
@@ -38,11 +37,13 @@ sudo apt install -y zsh
 chsh -s /bin/zsh  # set default shell
 
 # tilix
-sudo apt install -y tilix dconf
+sudo apt install -y tilix dconf-editor
 # set up personnal settings with dconf
+# sudo update-alternatives --config x-terminal-emulator
 
-# pet
-# install ?
+# pet  # choose where download file and delete
+wget https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb
+sudo dpkg -i pet_0.3.0_linux_amd64.deb
 # gist ?
 
 # Sublime Text and Sublime Merge
@@ -62,18 +63,25 @@ cd
 EDITOR=subl; export EDITOR
 VISUAL="$EDITOR"; export VISUAL
 
+# Micro
+# Choose where to download and place the .micro
+curl https://getmic.ro | bash  # run with ./micro
 
 # Python
 sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository universe
 sudo apt update -y
-sudo apt install -y python3 # bpython ? python3-pip ?
+sudo apt install -y python3 python3-pip 
+pip3 install -u bpython
 
-# Docker
-sudo apt install -y docker
-sudo systemctl start docker
-sudo systemctl enable docker
+# Docker ???
+# Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json?limit=1: dial unix /var/run/docker.sock: connect: permission denied
+# voir autre fichier aussi
+# sudo apt install -y docker
+# sudo systemctl start docker
+# sudo systemctl enable docker
 
 
 # Install packages that does not use apt
-sudo snap install pycharm-community --classic
+# sudo snap install pycharm-community --classic
 # personnal settings from repo with gist
