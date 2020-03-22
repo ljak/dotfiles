@@ -72,7 +72,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo add-apt-repository universe
 sudo apt update -y
 sudo apt install -y python3 python3-pip 
-pip3 install -u bpython
+pip3 install bpython
 
 # Docker ???
 # Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json?limit=1: dial unix /var/run/docker.sock: connect: permission denied

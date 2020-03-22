@@ -15,7 +15,7 @@ source set_kb_layouts.sh
 sudo apt update -y
 sudo apt upgrade -y
 
-sudo apt install -y git
+sudo apt install -y git snapd
 sudo snap install chezmoi --classic
 
 chezmoi init https://github.com/ljak/dotfiles.git
