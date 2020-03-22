@@ -9,6 +9,9 @@
 # Hint: There is a terminal configuration tool if needed: `sudo dpkg-reconfigure keyboard-configuration`
 
 
+set -o pipefail  # script failed when one command of a pipe failed
+
+
 get_current_desktop_env () {
 	local desktop=${XDG_CURRENT_DESKTOP}
 	if [ "${desktop}" = "" ]; then

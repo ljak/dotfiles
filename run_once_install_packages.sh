@@ -6,9 +6,8 @@
 
 # Run: 
 
-# set -o errexit  # make script exits when a command fails
-# set -o pipefail # exit status of the last command that threw a non-zero exit code is returned
-# set -o xtrace  # for debugging
+
+set -o pipefail  # script failed when one command of a pipe failed
 
 
 # Set up git profil

@@ -6,9 +6,6 @@
 
 # Run: Execute command `./bootstrap.sh`
 
-# set -o errexit  # make script exits when a command fails
-# set -o pipefail # exit status of the last command that threw a non-zero exit code is returned
-# set -o xtrace  # for debugging
 
 source set_kb_layouts.sh
 
