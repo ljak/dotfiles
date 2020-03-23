@@ -2,3 +2,6 @@ README.md
 
 bootstrap.sh
 set_kb_layouts.sh
+optional_packages.sh
+setup_gnome.sh
+hardcoded_icon_fixer.sh
