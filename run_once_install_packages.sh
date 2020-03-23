@@ -2,9 +2,9 @@
 # Author: ljak
 # Creation Date: 2020_03_13
 
-# Description: 
+# Description:
 
-# Run: 
+# Run:
 
 
 set -o pipefail  # script failed when one command of a pipe failed
@@ -64,7 +64,7 @@ VISUAL="$EDITOR"; export VISUAL
 
 # Micro
 # Choose where to download and place the .micro
-curl https://getmic.ro | bash  # run with ./micro
+# curl https://getmic.ro | bash  # run with ./micro
 
 # Python
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -87,3 +87,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Install packages that does not use apt
 # sudo snap install pycharm-community --classic
 # personnal settings from repo with gist
+# sudo snap install skype --classic
+# sudo snap install spotify
