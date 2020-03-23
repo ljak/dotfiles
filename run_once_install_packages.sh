@@ -73,12 +73,15 @@ sudo apt update -y
 sudo apt install -y python3 python3-pip 
 pip3 install bpython
 
-# Docker ???
-# Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json?limit=1: dial unix /var/run/docker.sock: connect: permission denied
-# voir autre fichier aussi
-# sudo apt install -y docker
-# sudo systemctl start docker
-# sudo systemctl enable docker
+# Docker
+sudo apt install -y docker.io  # docker.io simplier than docker-ce
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ljak  # abstract user ${user}
+su - ljak  # `id -nG` to check if ${user} is present
+# Docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 
 # Install packages that does not use apt
