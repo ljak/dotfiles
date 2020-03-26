@@ -22,6 +22,7 @@ htop
 wget
 xclip
 firefox
+net-tools
 ca-certificates
 apt-transport-https
 software-properties-common
@@ -77,8 +78,12 @@ pip3 install bpython
 sudo apt install -y docker.io  # docker.io simplier than docker-ce
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo usermod -aG docker ljak  # abstract user ${user}
-su - ljak  # `id -nG` to check if ${user} is present
+if ! grep -q docker /etc/group
+then
+  sudo groupadd docker
+fi
+sudo usermod -aG docker $USER
+su - $USER  # `id -nG` to check if ${user} is present
 # Docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
