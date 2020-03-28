@@ -10,13 +10,12 @@
 set -o pipefail  # script failed when one command of a pipe failed
 
 
-# Set up git profil
-# ssh keys, github, gitlab, ...
-# 
+# ssh keys ?
 
 
 # Install packages that does not require additional commands
 packages_wo_addcomms="
+jq
 curl
 htop
 wget
@@ -41,10 +40,8 @@ sudo apt install -y tilix dconf-editor
 # set up personnal settings with dconf
 # sudo update-alternatives --config x-terminal-emulator
 
-# pet  # choose where download file and delete
-wget https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb
-sudo dpkg -i pet_0.3.0_linux_amd64.deb
-# gist ?
+# pet
+wget https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb && sudo dpkg -i pet_0.3.0_linux_amd64.deb && sudo rm pet_0.3.0_linux_amd64.deb
 
 # Sublime Text and Sublime Merge
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
