@@ -1,0 +1,12 @@
+[General]
+  snippetfile = "~/.config/pet/snippet.toml"
+  editor = "subl"
+  column = 40
+  selectcmd = "fzf"
+
+[Gist]
+  file_name = "pet-snippet.toml"
+  access_token = "{{ (bitwarden "item" "cc0cf493-18a2-4ac3-b60d-ab8c002a8b2e").login.password }}"
+  gist_id = "{{ (bitwarden "item" "cc0cf493-18a2-4ac3-b60d-ab8c002a8b2e").login.username }}"
+  public = false
+  auto_sync = true
