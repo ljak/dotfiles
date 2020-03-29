@@ -12,7 +12,13 @@ sudo add-apt-repository universe
 sudo apt update -y
 sudo apt install -y gnome-tweak-tool chrome-gnome-shell
 curl https://raw.githubusercontent.com/oae/gnome-shell-extensions-sync/master/installer.sh | bash  # Sync extension auto-install
+
 # See Gist ID and Gist Token to auto sync
+SYNC_USERNAME=$(bw get item 0926b5a4-3eba-4326-bd1a-ab8c0029ce36 | jq .login.username | sed -r "s/\\\"/\\'/g" | sed 's/^/\"/g' | sed 's/$/\"/g')
+dconf write /org/gnome/shell/extensions/sync/gist-id $SYNC_USERNAME
+SYNC_PASSWORD=$(bw get item 0926b5a4-3eba-4326-bd1a-ab8c0029ce36 | jq .login.password| sed -r "s/\\\"/\\'/g" | sed 's/^/\"/g' | sed 's/$/\"/g')
+dconf write /org/gnome/shell/extensions/sync/gist-token $SYNC_PASSWORD
+
 xdg-open https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/  # open link in default browser
 
 # if needed
