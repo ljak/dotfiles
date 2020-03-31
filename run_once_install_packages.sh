@@ -16,6 +16,7 @@ set -o pipefail  # script failed when one command of a pipe failed
 # Install packages that does not require additional commands
 packages_wo_addcomms="
 jq
+fzf
 curl
 htop
 wget
@@ -27,6 +28,9 @@ apt-transport-https
 software-properties-common
 "
 sudo apt install -y ${packages_wo_addcomms}
+# if fzf does not work:
+# download from https://packages.ubuntu.com/eoan/amd64/fzf/download
+# sudo dpkg -i fzf_0.18.0-2_amd64.deb
 
 
 # Install packages that require additional commands
@@ -70,6 +74,7 @@ sudo add-apt-repository universe
 sudo apt update -y
 sudo apt install -y python3 python3-pip 
 pip3 install bpython
+pip3 install virtualenvwrapper
 
 # Docker
 sudo apt install -y docker.io  # docker.io simplier than docker-ce
