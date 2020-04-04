@@ -10,13 +10,9 @@
 set -o pipefail  # script failed when one command of a pipe failed
 
 
-# ssh keys ?
-
-
 # Install packages that does not require additional commands
 packages_wo_addcomms="
 jq
-fzf
 curl
 htop
 wget
@@ -41,8 +37,10 @@ chsh -s /bin/zsh  # set default shell
 
 # tilix
 sudo apt install -y tilix dconf-editor
+# sudo update-alternatives --config x-terminal-emulator ?
 # set up personnal settings with dconf
-# sudo update-alternatives --config x-terminal-emulator
+# dconf dump /com/gexperts/Tilix/ > tilix.dconf
+# dconf load /com/gexperts/Tilix/ < tilix.dconf
 
 # pet
 wget https://github.com/knqyf263/pet/releases/download/v0.3.0/pet_0.3.0_linux_amd64.deb && sudo dpkg -i pet_0.3.0_linux_amd64.deb && sudo rm pet_0.3.0_linux_amd64.deb
@@ -92,7 +90,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 # Install packages that does not use apt
-# sudo snap install pycharm-community --classic
+sudo snap install pycharm-community --classic
 # personnal settings from repo with gist
-# sudo snap install skype --classic
-# sudo snap install spotify
+sudo snap install skype --classic
+sudo snap install spotify
