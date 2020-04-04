@@ -20,3 +20,5 @@ bw login
 
 chezmoi init https://github.com/ljak/dotfiles.git
 # chezmoi apply
+
+# git remote set-url origin git@github.com:ljak/dotfiles.git could be needed later
