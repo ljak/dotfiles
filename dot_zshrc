@@ -71,12 +71,14 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	git
 	fzf
-	pip
 	docker
+	docker-compose
 	extract
 	virtualenvwrapper
 	zsh-autosuggestions
 	)
+# if completions plugins won't work
+# Try rm ~/.zcompdump* after enabling the plugins and then restart the shell.
 
 # fzf setting
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
