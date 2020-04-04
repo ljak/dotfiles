@@ -78,6 +78,10 @@ plugins=(
 	zsh-autosuggestions
 	)
 
+# fzf setting
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+FZF_BASE=~/.oh-my-zsh/custom/plugins/fzf/
+
 # virtualenvwrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
