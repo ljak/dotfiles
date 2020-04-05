@@ -38,18 +38,14 @@ set_keyboard_layouts () {
 	# set GNOME GSetting variables if needed
 	local current_desktop_env=$(get_current_desktop_env)
 	if [[ ${current_desktop_env} = *"gnome"* ]]; then
-		sudo gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr+bepo'), ('xkb', 'us')]"
-		sudo gsettings set org.gnome.desktop.input-sources xkb-options "['${options}']"
+		gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr+bepo'), ('xkb', 'us')]"
+		gsettings set org.gnome.desktop.input-sources xkb-options "['${options}']"
 		echo 'GNOME Gsetting org.gnome.desktop.input-sources SETTED.'
 	fi
 }
 
 
 set_keyboard_layouts
-gnome-shell --replace &
-# to test: killall -3 gnome-shell
-# is it something : https://askubuntu.com/questions/1039950/ubuntu-18-04-how-to-change-keyboard-layout-from-a-script ?
-
 
 sudo apt update -y
 sudo apt upgrade -y
