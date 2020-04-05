@@ -59,3 +59,5 @@ bw login
 chezmoi init https://github.com/ljak/dotfiles.git
 # git remote set-url origin git@github.com:ljak/dotfiles.git to set repo with ssh later
 chezmoi apply
+
+echo 'Set your default shell with command : `chsh -s /bin/zsh`'

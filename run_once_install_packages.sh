@@ -13,6 +13,7 @@ set -o pipefail  # script failed when one command of a pipe failed
 # Install packages that does not require additional commands
 packages_wo_addcomms="
 jq
+zsh
 curl
 htop
 wget
@@ -27,14 +28,6 @@ sudo apt install -y ${packages_wo_addcomms}
 
 
 # Install packages that require additional commands
-
-# zsh
-sudo apt install -y zsh
-sudo chsh -s /bin/zsh  # set default shell
-# if problem with chsh: https://serverfault.com/questions/202468/changing-the-shell-using-chsh-via-the-command-line-in-a-script
-
-# oh-my-zsh
-# ~/.oh-my-zsh/custom/plugins/fzf/install  # check if .fzf.zsh works with ~ in path
 
 # tilix
 sudo apt install -y tilix dconf-editor
