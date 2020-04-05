@@ -27,7 +27,7 @@ set_keyboard_layouts () {
 	# set xkb config file
 	local debian_kb_settings_filepath=/etc/default/keyboard
 	if [ ! -f "${debian_kb_settings_filepath}" ]; then
-		echo 'ERROR from set_kb_layouts.sh: file '${debian_kb_settings_filepath}' does not exist'
+		echo 'ERROR from boostrap.sh: file '${debian_kb_settings_filepath}' does not exist'
 		exit 1
 	fi
 	sudo sed -i 's/XKBLAYOUT=.*$/XKBLAYOUT="'${layouts}'"/g' ${debian_kb_settings_filepath}
