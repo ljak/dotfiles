@@ -46,6 +46,9 @@ set_keyboard_layouts () {
 
 
 set_keyboard_layouts
+gnome-shell --replace &
+# to test: killall -3 gnome-shell
+# is it something : https://askubuntu.com/questions/1039950/ubuntu-18-04-how-to-change-keyboard-layout-from-a-script ?
 
 
 sudo apt update -y
