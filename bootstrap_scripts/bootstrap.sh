@@ -57,7 +57,6 @@ sudo snap install bw  # bitwarden
 
 bw login
 
-chezmoi init git@github.com:ljak/dotfiles.git
-# chezmoi init https://github.com/ljak/dotfiles.git
-# git remote set-url origin git@github.com:ljak/dotfiles.git could be needed later
+chezmoi init https://github.com/ljak/dotfiles.git
+# git remote set-url origin git@github.com:ljak/dotfiles.git to set repo with ssh later
 chezmoi apply
