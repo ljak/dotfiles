@@ -16,6 +16,7 @@ jq
 zsh
 curl
 htop
+tree
 wget
 xclip
 firefox
