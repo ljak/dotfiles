@@ -31,7 +31,7 @@ sudo apt install -y ${packages_wo_addcomms}
 
 # tilix
 sudo apt install -y tilix dconf-editor
-# sudo update-alternatives --config x-terminal-emulator ?
+sudo update-alternatives --config x-terminal-emulator  # choose default terminal
 # set up personnal settings with dconf
 # dconf dump /com/gexperts/Tilix/ > tilix.dconf
 # dconf load /com/gexperts/Tilix/ < tilix.dconf
