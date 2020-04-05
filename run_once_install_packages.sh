@@ -24,16 +24,17 @@ apt-transport-https
 software-properties-common
 "
 sudo apt install -y ${packages_wo_addcomms}
-# if fzf does not work:
-# download from https://packages.ubuntu.com/eoan/amd64/fzf/download
-# sudo dpkg -i fzf_0.18.0-2_amd64.deb
 
 
 # Install packages that require additional commands
 
 # zsh
 sudo apt install -y zsh
-chsh -s /bin/zsh  # set default shell
+sudo chsh -s /bin/zsh  # set default shell
+# if problem with chsh: https://serverfault.com/questions/202468/changing-the-shell-using-chsh-via-the-command-line-in-a-script
+
+# oh-my-zsh
+# ~/.oh-my-zsh/custom/plugins/fzf/install  # check if .fzf.zsh works with ~ in path
 
 # tilix
 sudo apt install -y tilix dconf-editor
