@@ -4,7 +4,7 @@
 
 # Description:
 
-# Run:
+# Run: Should be started by chezmoi when chezmoi init repo
 
 
 set -o pipefail  # script failed when one command of a pipe failed
@@ -91,7 +91,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 # Install packages that does not use apt
-sudo snap install pycharm-community --classic
+# sudo snap install pycharm-community --classic
 # personnal settings from repo with gist
-sudo snap install skype --classic
-sudo snap install spotify
+# sudo snap install skype --classic
+# sudo snap install spotify
