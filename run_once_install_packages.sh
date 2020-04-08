@@ -62,8 +62,8 @@ VISUAL="$EDITOR"; export VISUAL
 # curl https://getmic.ro | bash  # run with ./micro
 
 # Python
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo add-apt-repository universe
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo add-apt-repository -y universe
 sudo apt update -y
 sudo apt install -y python3 python3-pip 
 pip3 install bpython
@@ -82,6 +82,10 @@ su - $USER  # `id -nG` to check if ${user} is present
 # Docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+# neofetch
+sudo add-apt-repository -y ppa:dawidd0811/neofetch
+sudo apt install -y neofetch
 
 
 # Install packages that does not use apt
