@@ -83,8 +83,14 @@ su - $USER  # `id -nG` to check if ${user} is present
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+# uGet
+sudo add-apt-repository -y ppa:plushuang-tw/uget-stable
+sudo apt update -y
+sudo apt install -y uget
+
 # neofetch
 sudo add-apt-repository -y ppa:dawidd0811/neofetch
+sudo apt update -y
 sudo apt install -y neofetch
 
 
