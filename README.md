@@ -1,5 +1,8 @@
 # dotfiles
 
-Everything starts with `bootstrap.sh`, from the `bootrap_scripts` folder.
+Simply `bash <(wget -qO- https://raw.githubusercontent.com/ljak/dotfiles/master/bootstrap_scripts/bootstrap.sh)`
 
-So, get the file and execute command `./bootstrap.sh`.
+
+## Gnome DE
+
+To setup Gnome DE after applying chezmoi, execute `setup_gnome.sh` from `bootstrap_scripts`.
