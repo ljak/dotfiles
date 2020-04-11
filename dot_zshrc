@@ -93,8 +93,8 @@ plugins=(
 # Try rm ~/.zcompdump* after enabling the plugins and then restart the shell.
 
 # fzf setting
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 FZF_BASE=~/.oh-my-zsh/custom/plugins/fzf/
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # virtualenvwrapper settings
 export WORKON_HOME=$HOME/.virtualenvs

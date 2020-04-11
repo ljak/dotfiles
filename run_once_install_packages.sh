@@ -10,9 +10,17 @@
 set -o pipefail  # script failed when one command of a pipe failed
 
 
+# Run as sudo
+if [ $EUID != 0 ]; then
+    sudo "$0" "$@"
+    exit $?
+fi
+
+
 # Install packages that does not require additional commands
 packages_wo_addcomms="
 jq
+vlc
 zsh
 curl
 htop
@@ -21,6 +29,7 @@ wget
 xclip
 firefox
 net-tools
+dconf-editor
 ca-certificates
 apt-transport-https
 software-properties-common
@@ -31,8 +40,8 @@ sudo apt install -y ${packages_wo_addcomms}
 # Install packages that require additional commands
 
 # tilix
-sudo apt install -y tilix dconf-editor
-sudo update-alternatives --config x-terminal-emulator  # choose default terminal
+sudo apt install -y tilix
+sudo update-alternatives --set x-terminal-emulator /usr/bin/tilix.wrapper  # set tilix as default terminal
 # set up personnal settings with dconf
 # dconf dump /com/gexperts/Tilix/ > tilix.dconf
 # dconf load /com/gexperts/Tilix/ < tilix.dconf
