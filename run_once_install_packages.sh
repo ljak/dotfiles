@@ -10,13 +10,6 @@
 set -o pipefail  # script failed when one command of a pipe failed
 
 
-# Run as sudo
-if [ $EUID != 0 ]; then
-    sudo "$0" "$@"
-    exit $?
-fi
-
-
 # Install packages that does not require additional commands
 packages_wo_addcomms="
 jq
