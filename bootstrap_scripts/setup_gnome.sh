@@ -11,23 +11,30 @@
 sudo add-apt-repository universe
 sudo apt update -y
 sudo apt install -y gnome-tweak-tool chrome-gnome-shell
-curl https://raw.githubusercontent.com/oae/gnome-shell-extensions-sync/master/installer.sh | bash  # Sync extension auto-install
-
-# See Gist ID and Gist Token to auto sync
-SYNC_USERNAME=$(bw get item 0926b5a4-3eba-4326-bd1a-ab8c0029ce36 | jq .login.username | sed -r "s/\\\"/\\'/g" | sed 's/^/\"/g' | sed 's/$/\"/g')
-dconf write /org/gnome/shell/extensions/sync/gist-id $SYNC_USERNAME
-SYNC_PASSWORD=$(bw get item 0926b5a4-3eba-4326-bd1a-ab8c0029ce36 | jq .login.password| sed -r "s/\\\"/\\'/g" | sed 's/^/\"/g' | sed 's/$/\"/g')
-dconf write /org/gnome/shell/extensions/sync/gist-token $SYNC_PASSWORD
-
 xdg-open https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/  # open link in default browser
+
+
+# Sync Extension - is broken for now...
+xdg-open https://github.com/oae/gnome-shell-extensions-sync
+# See Gist ID and Gist Token to auto sync
+# SYNC_USERNAME=$(bw get item 0926b5a4-3eba-4326-bd1a-ab8c0029ce36 | jq .login.username | sed -r "s/\\\"/\\'/g" | sed 's/^/\"/g' | sed 's/$/\"/g')
+# dconf write /org/gnome/shell/extensions/sync/gist-id $SYNC_USERNAME
+# SYNC_PASSWORD=$(bw get item 0926b5a4-3eba-4326-bd1a-ab8c0029ce36 | jq .login.password| sed -r "s/\\\"/\\'/g" | sed 's/^/\"/g' | sed 's/$/\"/g')
+# dconf write /org/gnome/shell/extensions/sync/gist-token $SYNC_PASSWORD
+
+xdg-open https://extensions.gnome.org/extension/1160/dash-to-panel/
+xdg-open https://extensions.gnome.org/extension/19/user-themes/
+xdg-open https://extensions.gnome.org/extension/517/caffeine/
+xdg-open https://extensions.gnome.org/extension/750/openweather/
+xdg-open https://extensions.gnome.org/extension/897/turn-off-display/
+
+# TODO get the settings for the extensions ?
 
 # if needed
 # gnome-shell --version
 # sudo rm -r /usr/share/gnome-shell/extensions/ubuntu-* / pomodoro
 # More http://www.bernaerts-nicolas.fr/linux/76-gnome/345-gnome-shell-install-remove-extension-command-line-script
 
-
-# TODO get the settings for the extensions ?
 
 # ### GNOME Theme
 # GTK Theme
