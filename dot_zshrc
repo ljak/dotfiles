@@ -168,5 +168,8 @@ bindkey '^s' pet-select
 # could be necessary: sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 # Always at the end of the file
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+	if [ ! -f /etc/profile.d/vte.sh ]; then
+		ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+	fi
+    source /etc/profile.d/vte.sh
 fi
