@@ -64,7 +64,7 @@ VISUAL="$EDITOR"; export VISUAL
 # curl https://getmic.ro | bash  # run with ./micro
 
 # Python
-sudo add-apt-repository -y ppa:deadsnakes/ppa
+# sudo add-apt-repository -y ppa:deadsnakes/ppa  # to get the latest python possible
 sudo add-apt-repository -y universe
 sudo apt update -y
 sudo apt install -y python3 python3-pip 
@@ -94,6 +94,9 @@ sudo apt install -y uget
 sudo add-apt-repository -y ppa:dawidd0811/neofetch
 sudo apt update -y
 sudo apt install -y neofetch
+
+# cleaning apt
+sudo apt autoremove
 
 
 # Install packages that does not use apt
