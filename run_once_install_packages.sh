@@ -79,8 +79,8 @@ if ! grep -q docker /etc/group
 then
   sudo groupadd docker
 fi
-sudo usermod -aG docker $USER
-su - $USER  # `id -nG` to check if ${user} is present
+sudo usermod -aG docker $USER  # `id -nG` to check if ${user} is present in docker group
+
 # Docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
