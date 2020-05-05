@@ -20,6 +20,7 @@ htop
 tree
 wget
 xclip
+catfish
 firefox
 net-tools
 dconf-editor
