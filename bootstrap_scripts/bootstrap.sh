@@ -7,6 +7,7 @@
 # Run: Execute command `./bootstrap.sh`
 
 
+set -o errexit  # make script exits when a command fails
 set -o pipefail  # script failed when one command of a pipe failed
 
 
