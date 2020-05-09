@@ -52,6 +52,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 sudo apt install -y git snapd
+export PATH="$PATH:/snap/bin"
 sudo snap install chezmoi --classic
 sudo snap install bw  # bitwarden
 
