@@ -137,6 +137,8 @@ alias cm='chezmoi'
 alias reload="source $HOME/.zshrc"
 alias zshconfig='chezmoi edit ~/.zshrc'
 
+alias bkshorts="dconf dump /org/gnome/desktop/wm/keybindings/ > ~/.local/share/chezmoi/bootstrap_scripts/gnome_keybindings.dconf"
+
 # Lines configured by zsh-newuser-install
 #History setup
 # HISTFILE=$HOME/.zsh_history
