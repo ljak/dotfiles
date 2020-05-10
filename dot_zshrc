@@ -94,7 +94,6 @@ plugins=(
 
 # fzf setting
 FZF_BASE=~/.oh-my-zsh/custom/plugins/fzf/
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # virtualenvwrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
@@ -165,6 +164,9 @@ function pet-select() {
 zle -N pet-select
 stty -ixon
 bindkey '^s' pet-select
+
+# source fzf - need to be at the end 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Tilix Fix
 # could be necessary: sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
